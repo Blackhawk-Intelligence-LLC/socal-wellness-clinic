@@ -10,9 +10,18 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+  const isMissingConfig = !supabaseUrl || !supabaseKey;
+
   return (
     <AuthProvider>
       <div className="min-h-screen">
+        {isMissingConfig && (
+          <div className="bg-red-600 text-white px-4 py-3 text-center font-medium">
+            ⚠️ Configuration Error: Missing Supabase credentials. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to Vercel environment variables.
+          </div>
+        )}
         <Header />
         <main>
           <Hero />
