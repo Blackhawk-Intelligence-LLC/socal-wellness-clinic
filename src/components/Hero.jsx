@@ -12,7 +12,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-24 md:pt-28 lg:pt-32 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 -z-10" />
       
@@ -54,7 +54,7 @@ const Hero = () => {
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Transform Your Health,{' '}
-              <span className="text-primary">Transform Your Life</span>
+              <span className="bg-gradient-to-r from-[#001E40] to-[#5B8FA8] bg-clip-text text-transparent font-extrabold">Transform Your Life</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Experience personalized medical weight loss and wellness solutions at Chula Vista's premier clinic. 
@@ -79,11 +79,25 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
+              <Button 
+                size="lg" 
+                className="group"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Start Your Journey
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button 
+                size="lg" 
+                variant="outline"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Free Consultation
               </Button>
             </div>
@@ -98,8 +112,8 @@ const Hero = () => {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop"
-                alt="Happy healthy couple"
+                src="/hero/hero-image.png"
+                                  alt="Beautiful woman with radiant skin showcasing wellness results"
                 className="w-full h-auto"
               />
               {/* Overlay card */}

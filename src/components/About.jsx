@@ -65,7 +65,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Your Partner in <span className="text-primary">Health & Wellness</span>
+              Your Partner in <span className="bg-gradient-to-r from-[#001E40] to-[#5B8FA8] bg-clip-text text-transparent">Health & Wellness</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6">
               At SoCal Wellness, we believe that everyone deserves to feel their best. 

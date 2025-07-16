@@ -1,0 +1,51 @@
+# WORK DIRECTORY STRUCTURE - ALWAYS APPLIED
+
+## CRITICAL: READ AND FOLLOW WITHOUT EXCEPTION
+
+**BASE WORK DIRECTORY:** `/Users/carlson/Desktop/Work/`
+
+### ABSOLUTE RULES:
+
+1. **ALL new projects MUST be created at:** `/Users/carlson/Desktop/Work/{project-name}/`
+   - Replace `{project-name}` with the actual project name
+   - NEVER ask where to create a project
+   - NEVER suggest alternative locations
+   - ALWAYS use this path structure
+
+2. **DO NOT ASK QUESTIONS ABOUT:**
+   - Where to save files
+   - Where to create the project
+   - What directory to use
+   - Whether to create directories
+   
+3. **ALWAYS:**
+   - Create the project directory if it doesn't exist
+   - Use the exact path: `/Users/carlson/Desktop/Work/{project-name}/`
+   - Place all project files within this structure
+   - Create subdirectories as needed (src/, tests/, docs/, etc.)
+
+### DEFAULT PROJECT STRUCTURE:
+```
+/Users/carlson/Desktop/Work/{project-name}/
+├── src/           # Source code
+├── tests/         # Test files
+├── docs/          # Documentation
+├── data/          # Data files
+├── config/        # Configuration files
+└── README.md      # Project readme
+```
+
+### EXAMPLES:
+- New React project "my-app": `/Users/carlson/Desktop/Work/my-app/`
+- Python project "data-analyzer": `/Users/carlson/Desktop/Work/data-analyzer/`
+- Any project named "X": `/Users/carlson/Desktop/Work/X/`
+
+### EXCEPTIONS:
+- ONLY if explicitly told to use a different location
+- ONLY if working on an existing project already located elsewhere
+
+### REMINDER:
+**This is the DEFAULT and ONLY location for ALL new projects. Do not waste time asking about it. Just use it.**
+
+---
+*This rule applies to EVERY new project unless explicitly instructed otherwise by the user.*

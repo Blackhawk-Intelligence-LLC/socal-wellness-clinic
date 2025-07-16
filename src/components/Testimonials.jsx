@@ -85,8 +85,8 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Patient Success Stories
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-[#001E40] to-[#012650] bg-clip-text text-transparent">Patient Success Stories</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real results from real people who've transformed their lives with our help

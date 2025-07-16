@@ -118,8 +118,8 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Our Services
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-[#001E40] to-[#012650] bg-clip-text text-transparent">Our Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive wellness solutions tailored to your unique health goals
@@ -159,6 +159,10 @@ const Services = () => {
                     <Button 
                       variant="ghost" 
                       className="w-full group-hover:bg-primary group-hover:text-white transition-colors"
+                      onClick={() => {
+                        const contactSection = document.getElementById('contact');
+                        contactSection?.scrollIntoView({ behavior: 'smooth' });
+                      }}
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -176,7 +180,14 @@ const Services = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-12"
         >
-          <Button size="lg" className="group">
+          <Button 
+            size="lg" 
+            className="group"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              contactSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             View All Services
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>

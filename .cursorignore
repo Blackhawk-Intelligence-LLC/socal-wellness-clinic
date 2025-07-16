@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/build
+/test
+/docs
+/examples
+/scripts
+/config
+/logs
+/supabase
+/package-lock.json
+

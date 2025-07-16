@@ -7,14 +7,14 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: 'Medical Weight Loss', href: '#' },
-      { name: 'IV Therapy', href: '#' },
-      { name: 'Anti-Aging', href: '#' },
-      { name: 'Hormone Replacement', href: '#' },
+      { name: 'Medical Weight Loss', href: '#services' },
+      { name: 'IV Therapy', href: '#services' },
+      { name: 'Anti-Aging', href: '#services' },
+      { name: 'Hormone Replacement', href: '#services' },
     ],
     company: [
       { name: 'About Us', href: '#about' },
-      { name: 'Our Team', href: '#' },
+      { name: 'Our Team', href: '#about' },
       { name: 'Reviews', href: '#reviews' },
       { name: 'Blog', href: '#' },
     ],
@@ -36,7 +36,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* CTA Section */}
-      <div className="bg-primary">
+      <div className="bg-gradient-to-r from-[#001E40] via-[#012650] to-[#001E40]">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center">
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h3>
@@ -44,11 +44,25 @@ const Footer = () => {
               Join thousands who have transformed their lives with SoCal Wellness
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
+              <Button 
+                size="lg" 
+                className="bg-white text-[#001E40] hover:bg-gray-100"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Schedule Consultation
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
-                Call 619-476-0060
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="bg-transparent text-white border-white hover:bg-white hover:text-[#001E40] transition-all duration-200"
+                asChild
+              >
+                <a href="tel:619-476-0060">
+                  Call 619-476-0060
+                </a>
               </Button>
             </div>
           </div>
@@ -60,7 +74,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <h4 className="text-2xl font-bold mb-4">SoCal Wellness</h4>
+            <img 
+              src="/logo/svg-logos/white.svg"
+              alt="SoCal Wellness Clinic"
+              className="h-20 w-auto max-w-[280px] object-contain mb-6"
+            />
             <p className="text-gray-400 mb-6">
               Your premier medical weight loss and wellness clinic in Chula Vista, CA. 
               Transforming lives through personalized, science-based treatments.
